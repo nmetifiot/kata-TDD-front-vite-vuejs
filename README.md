@@ -1,20 +1,19 @@
 # KATA TDD front
 
 ## Objectif
-Le but de ce kata est d'afficher une liste issue d'un paramétrage Page et proposer la suppression de chaque ligne
+
+Le but de ce kata est d'afficher une blague lorsqu'on clique sur un bouton
 
 ## Etapes
+
 ### Etape 1
-Créer le composant qui va accueillir la liste
+
+Créer le bouton
 
 ### Etape 2
-Simuler l'affichage de la liste avec des données mockées
+
+Faire l'appel à l'api pour récupérer la blague
 
 ### Etape 3
-Créer la fonction de récupération des données
 
-### Etape 4
-Ajouter le bouton de suppression dans la liste
-
-### Etape 5
-Créer la fonction de suppression
+Afficher la blague
