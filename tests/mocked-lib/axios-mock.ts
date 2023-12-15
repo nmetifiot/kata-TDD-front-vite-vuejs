@@ -1,13 +1,13 @@
-import { ref } from 'vue';
+import {ref} from 'vue';
 import axios from 'axios';
-import type { Mocked } from 'vitest';
+import {vi} from 'vitest';
 
 vi.mock('axios');
 
-export const mockedAxios = axios as Mocked<typeof axios>;
+export const mockedAxios = axios as vi.Mocked<typeof axios>;
 
 
-export const mockUseApi = {
+const mockUseApi = {
   get: mockedAxios.get,
   post: mockedAxios.post,
   del: mockedAxios.delete,
@@ -21,3 +21,4 @@ export const mockUseApi = {
   api: mockedAxios
 };
 
+export const useApi = vi.fn().mockReturnValue(mockUseApi);

@@ -14,7 +14,7 @@ export default mergeConfig(
       root: fileURLToPath(new URL('./', import.meta.url)),
       clearMocks: true,
       globals: true,
-      environment: 'jsdom',
+      environment: 'jsdom'
     }
   })
 );
