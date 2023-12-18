@@ -38,6 +38,16 @@ GET https://v2.jokeapi.dev/joke/programming?type=twopart
     "lang": "en"
 }
 ```
+#### Comment mocker axios
+```ts
+import axios from 'axios'
+
+vi.mock('axios')
+
+axios.get.mockResolvedValue({
+    data: jokeApiMock,
+})
+```
 
 ### Etape 3
 
