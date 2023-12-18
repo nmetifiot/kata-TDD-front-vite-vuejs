@@ -1,0 +1,42 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "src/**/*",
+    "vite.config.*",
+    "vitest.config.*",
+    "tests/**/*",
+    "components.d.ts",
+    "node_modules/vitest/globals.d.ts"
+  ],
+  "compilerOptions": {
+    "importHelpers": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "useUnknownInCatchVariables": false,
+    "types": [
+      "node",
+      "vitest/globals"
+    ],
+    "paths": {
+      "@/*": [
+        "src/*"
+      ],
+      "@fixtures/*": [
+        "tests/unit/fixtures/*"
+      ],
+      "tslib": [
+        "node_modules/tslib/tslib.d.ts"
+      ]
+    },
+    "lib": [
+      "esnext",
+      "scripthost",
+      "ES2020",
+      "DOM"
+    ]
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
