@@ -15,6 +15,11 @@ export default mergeConfig(
       clearMocks: true,
       globals: true,
       environment: 'jsdom',
+      alias: {
+        'axios': fileURLToPath(
+            new URL('./tests/mocked-lib/axios-mock.ts', import.meta.url)
+        )
+      }
     }
   })
 );
