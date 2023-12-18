@@ -4,7 +4,7 @@ import App from "@/App.vue";
 import Titre from "@/components/Titre.vue";
 import Joke from "@/components/joke.vue";
 
-const generateWrapper = () => mount(App);
+const generateWrapper = () => mount(App, {shallow: true});
 
 describe('App', () => {
     describe('render', () => {
