@@ -49,6 +49,17 @@ axios.get.mockResolvedValue({
 })
 ```
 
+#### Comment mocker un module
+```ts
+const mockUseJoke = {
+    getJoke: vi.fn()
+};
+
+vi.mock('@/composables/UseJoke', () => ({
+    useJoke: () => mockUseJoke
+}));
+```
+
 ### Etape 3
 
 Afficher la blague
